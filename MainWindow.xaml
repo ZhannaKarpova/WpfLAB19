@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfLAB19.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfLAB19" xmlns:vm="clr-namespace:WpfLAB19.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="140" Width="300">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+    <StackPanel>
+        <TextBlock Text="Введите Радиус" VerticalAlignment="Center"
+                   HorizontalAlignment="Center" FontSize="14"  Foreground="Blue"/>
+        <TextBox Text="{Binding Path=Number1}" />
+        <Button Content="Окружность"  FontSize="14" 
+                Command="{Binding Path=AddCommand}" Foreground="Red"/>
+        <TextBox Text="{Binding Path=Number2}"/>
+    </StackPanel>
+</Window>
+
